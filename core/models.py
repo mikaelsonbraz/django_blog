@@ -9,3 +9,5 @@ class Post(models.Model):
     created = models.DateTimeField(auto_now_add=True)  # A data do post, auto_now_add=True adiciona automaticamente a data e hora que o post foi criado
     updated = models.DateTimeField(auto_now=True)  # Esse campo gravará a última data e hora que o post foi MODIFICADO.
 
+    def __str__(self):
+        return self.title
